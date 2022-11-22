@@ -7,9 +7,9 @@ import { auth } from "../firebase";
 const Navbar = () => {
   const [user] = useAuthState(auth);
 
-  if (!user) {
-    return "Loading...";
-  }
+  // if (!user) {
+  //   return "Loading...";
+  // }
 
   return (
     <div className="absolute-top border" style={{ backgroundColor: "purple" }}>

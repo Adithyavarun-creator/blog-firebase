@@ -10,9 +10,9 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [user] = useAuthState(auth);
 
-  if (!user) {
-    return "Loading...";
-  }
+  // if (!user) {
+  //   return "Loading...";
+  // }
 
   useEffect(() => {
     const articleRef = collection(db, "articles");
@@ -72,7 +72,7 @@ const Articles = () => {
                   <p>{createdAt.toDate().toString()}</p>
                   <h5>{description}</h5>
                   <div className="d-flex flex-row-reverse">
-                    {user.displayName}
+                    {user && user.displayName}
                   </div>
                 </div>
               </div>
